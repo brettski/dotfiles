@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+alias lasi="ls -lasi"
+
+alias grep='grep --color=auto'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'

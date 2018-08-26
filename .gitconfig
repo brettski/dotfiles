@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Brett Slaski
+	email = brettski@yahoo.com
+[core]
+	excludesfile = ~/.gitignore
+[color]
+	ui = true
+[credential]
+	helper = osxkeychain
