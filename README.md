@@ -7,7 +7,8 @@ Getting all of this in to shape. Opted to flatten to structure over a separate f
 ## References
 
 * [https://dotfiles.github.io/](https://dotfiles.github.io/)
-* https://github.com/mathiasbynens/dotfiles
+* [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+* [https://github.com/webpro/dotfiles](https://github.com/webpro/dotfiles)
 
 ## Install [Homebrew](https://brew.sh)
 

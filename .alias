@@ -6,3 +6,6 @@ alias grep='grep --color=auto'
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# update npm
+alias npmupdate='npm install -g npm'
