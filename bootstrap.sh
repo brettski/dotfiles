@@ -25,9 +25,10 @@ function linkHome() {
     ln -sfv "$DOTFILES_DIR/.gitconfig" ~
     ln -sfv "$DOTFILES_DIR/.gitignore" ~
     ln -sfv "$DOTFILES_DIR/.vimrc" ~
+    ln -sfv "$DOTFILES_DIR/.zshrc" ~
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then 
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
     linkHome;
 else
     read -p "This will probably overwrite files in your home directory. Are you SURE you want to do this (y/n) : " -n 1;
