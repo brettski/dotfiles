@@ -9,23 +9,15 @@ git pull origin master;
 export DOTFILES_DIR DOTFILES_CACHE DOTFILES_EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-#function copyHome() {
-#    rsync   --exclude ".git/" \
-#            --exclude ".DS_Store" \
-#            --exclude ".osx" \
-#            --exclude "bootstrap.sh" \
-#            --exclude "README.md" \
-#            --exclude "brew.sh" \
-#            -avh --no-perms . ~;
-#    source ~/.bash_profile;
-#}
-
 function linkHome() {
     ln -sfv "$DOTFILES_DIR/.bash_profile" ~
     ln -sfv "$DOTFILES_DIR/.gitconfig" ~
     ln -sfv "$DOTFILES_DIR/.gitignore" ~
     ln -sfv "$DOTFILES_DIR/.vimrc" ~
     ln -sfv "$DOTFILES_DIR/.zshrc" ~
+    ln -sfv "$DOTFILES_DIR/.aliases" ~
+    ln -sfv "$DOTFILES_DIR/.exports" ~
+    ln -sfv "$DOTFILES_DIR/.path" ~
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -38,3 +30,7 @@ else
     fi;
 fi;
 unset linkHome;
+
+. $DOTFILES_DIR/.macos
+
+source ~/.bash_profile;

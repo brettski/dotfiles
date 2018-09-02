@@ -3,7 +3,7 @@
 
 if [[ -d "$HOME/.dotfiles" ]]; then
 	DOTFILES_DIR="$HOME/.dotfiles";
-else 
+else
 	echo "unable to find .dotfiles folder, exiting"
 	return
 fi
