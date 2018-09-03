@@ -15,7 +15,7 @@ function linkHome() {
     ln -sfv "$DOTFILES_DIR/.gitignore" ~
     ln -sfv "$DOTFILES_DIR/.vimrc" ~
     ln -sfv "$DOTFILES_DIR/.zshrc" ~
-    ln -sfv "$DOTFILES_DIR/.aliases" ~
+    ln -sfv "$DOTFILES_DIR/.alias" ~
     ln -sfv "$DOTFILES_DIR/.exports" ~
     ln -sfv "$DOTFILES_DIR/.path" ~
 }
