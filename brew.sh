@@ -11,6 +11,7 @@ brew node
 brew openssl
 brew telnet
 brew wget
+brew bat
 
 # cleanup after all that drinking
 brew cleanup
