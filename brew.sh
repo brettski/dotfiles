@@ -12,6 +12,7 @@ brew openssl
 brew telnet
 brew wget
 brew bat
+brew p7zip
 
 # cleanup after all that drinking
 brew cleanup
