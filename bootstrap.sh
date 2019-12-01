@@ -10,14 +10,21 @@ export DOTFILES_DIR DOTFILES_CACHE DOTFILES_EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 function linkHome() {
-    read -p "Link .base_profile? (y/n) : " -n 1;
+    read -p "Setup zsh or bash? (z/b) : " 
     echo ""
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
+    if [[ $REPLY =~ ^[Zz] ]]; then
+        SETSHELL="zsh";
+    elif [[ $REPLY =~ ^[Bb] ]]; then
+        SETSHELL="bash";
+    else
+        echo "No setup shell provided. leaving.";
+        exit 1
+    fi
+
+    if [[ $SETSHELL -eq "bash" ]]; then
         ln -sfv "$DOTFILES_DIR/.bash_profile" ~
     fi;
-    read -p "Link .zshrc? (y/n) : " -n 1;
-    echo ""
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
+    if [[ $SETSHELL -eq "zsh" ]]; then
         ln -sfv "$DOTFILES_DIR/.zshrc" ~
     fi;
 
@@ -27,6 +34,8 @@ function linkHome() {
     ln -sfv "$DOTFILES_DIR/.alias" ~
     ln -sfv "$DOTFILES_DIR/.exports" ~
     ln -sfv "$DOTFILES_DIR/.path" ~
+
+    . $DOTFILES_DIR/.macos
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -37,11 +46,13 @@ else
     echo "";
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         linkHome;
-    fi;
+    fi
 fi;
 unset linkHome;
 
-. $DOTFILES_DIR/.macos
-
-source ~/.bash_profile;
-source ~/.zshrc
+if [[ $SETSHELL -eq "bash" ]]; then
+    source ~/.bash_profile;
+fi
+if [[ $SETSHELL -eq "zsh" ]]; then
+    source ~/.zshrc;
+fi
