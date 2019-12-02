@@ -5,9 +5,9 @@ brew update
 brew upgrade
 
 # install commandline tools/apps/binaries
+brew node@10
 brew go
-brew nmap
-brew node
+#brew nmap
 brew openssl
 brew telnet
 brew wget
