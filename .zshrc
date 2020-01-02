@@ -1,10 +1,12 @@
 #export PATH="/usr/local/opt/node@10/bin:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
+# The next line updates PATH for the Google Cloud SDK (gcp installed or brew installed).
 if [ -f '/Users/brettski/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brettski/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
+# The next line enables shell command completion for gcloud (gcp installed or brew installed).
 if [ -f '/Users/brettski/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brettski/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
 
 if [[ -d "$HOME/.dotfiles" ]]; then
 	DOTFILES_DIR="$HOME/.dotfiles";
@@ -46,3 +48,7 @@ zstyle ':vcs_info:git' actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%
 #PROMPT='%F{green}%~%f ${vcs_info_msg_0_} ${CH10}%(?.%F{green}√.%F{red}?%?)%f  %# '
 PROMPT='${vcs_info_msg_0_} %(?.%F{green}√.%F{red}?%?)%f %F{green}%~%f %# '
 echo "done"
+
+# GPG setting for active shell
+export GPG_TTY=$(tty)
+
