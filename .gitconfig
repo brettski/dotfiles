@@ -2,10 +2,14 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Brett Slaski
-	email = brettski@yahoo.com
+	email = brett@thatconference.com
+# mbw-key
+	signingkey = 73F73621EF7BC53A
 [core]
 	excludesfile = ~/.gitignore
 [color]
 	ui = true
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true
