@@ -4,7 +4,8 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/versions"
 # install packages
-brew "node@10"
+#brew "node@10"
+brew nodenv
 brew "go"
 brew "nmap"
 brew "telnet"

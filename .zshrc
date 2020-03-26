@@ -52,3 +52,5 @@ echo "done"
 # GPG setting for active shell
 export GPG_TTY=$(tty)
 
+# enable nodenv for shell
+eval "$(nodenv init -)"

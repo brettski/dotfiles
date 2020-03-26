@@ -5,7 +5,8 @@ brew update
 brew upgrade
 
 # install commandline tools/apps/binaries
-brew node@10
+#brew node@10
+brew nodenv
 brew go
 #brew nmap
 brew openssl
