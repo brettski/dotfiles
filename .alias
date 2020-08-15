@@ -10,3 +10,6 @@ alias path='echo -e ${PATH//:/\\n}'
 # update npm
 alias npmupdate='npm install -g npm'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+# show nodenv version and location
+alias nodever='nodenv version'
