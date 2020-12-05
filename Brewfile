@@ -4,7 +4,6 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/versions"
 # install packages
-#brew "node@10"
 brew nodenv
 brew "go"
 brew "nmap"
@@ -12,6 +11,7 @@ brew "telnet"
 brew "wget"
 brew "p7zip"
 #brew "openssl"
+brew "stripe/stripe-cli/stripe"
 # Casks
 cask "brave-browser"
 cask "insomnia"

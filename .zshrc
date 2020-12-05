@@ -8,6 +8,14 @@ if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.i
 if [ -f '/Users/brettski/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brettski/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Brew zsh completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 if [[ -d "$HOME/.dotfiles" ]]; then
 	DOTFILES_DIR="$HOME/.dotfiles";
 	echo "dotfile directory: $DOTFILES_DIR"
