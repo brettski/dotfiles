@@ -4,7 +4,7 @@
 	name = Brett Slaski
 	email = brett@thatconference.com
 # mbw-key
-	signingkey = 73F73621EF7BC53A
+	signingkey = 42CBD0625C45C007
 [core]
 	excludesfile = ~/.gitignore
 [color]
