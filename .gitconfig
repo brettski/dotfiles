@@ -12,7 +12,7 @@
 [credential]
 	helper = osxkeychain
 [commit]
-	#gpgsign = true
+	gpgsign = false
 [pull]
 	rebase = false
 [init]
