@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
 # golang
-export PATH=$PATH:$(go env GOPATH)/bin
-# brew 'keg only' installs
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export PATH=/usr/local/opt/node@16/bin:$PATH
+# export PATH=$PATH:$(go env GOPATH)/bin
+
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 

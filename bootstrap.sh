@@ -34,8 +34,6 @@ function linkHome() {
     ln -sfv "$DOTFILES_DIR/.alias" ~
     ln -sfv "$DOTFILES_DIR/.exports" ~
     ln -sfv "$DOTFILES_DIR/.path" ~
-
-    . $DOTFILES_DIR/.macos
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -49,10 +47,12 @@ else
     fi
 fi;
 unset linkHome;
-
-if [[ $SETSHELL -eq "bash" ]]; then
+echo "SETSHELL is $SETSHELL"
+if [[ $SETSHELL = "bash" ]]; then
+    echo "source .bash_profile"
     source ~/.bash_profile;
 fi
-if [[ $SETSHELL -eq "zsh" ]]; then
+if [[ $SETSHELL = "zsh" ]]; then
+    echo "source .szhrc"
     source ~/.zshrc;
 fi
