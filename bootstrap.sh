@@ -50,9 +50,9 @@ else
 fi;
 unset linkHome;
 
-if [[ $SETSHELL -eq "bash" ]]; then
+if [[ $SETSHELL = "bash" ]]; then
     source ~/.bash_profile;
 fi
-if [[ $SETSHELL -eq "zsh" ]]; then
+if [[ $SETSHELL = "zsh" ]]; then
     source ~/.zshrc;
 fi
