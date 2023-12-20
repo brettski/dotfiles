@@ -9,6 +9,7 @@
 
 # environment files
 .env
+.env_*
 
 # Icon must end with two \r
 Icon
