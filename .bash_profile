@@ -16,3 +16,4 @@ for file in $DOTFILES_DIR/.{path,exports,alias}; do
 done;
 unset file;
 
+. "$HOME/.cargo/env"
