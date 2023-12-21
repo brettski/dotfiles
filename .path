@@ -8,4 +8,3 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 
 export PATH="/usr/local/sbin:$PATH"
-
