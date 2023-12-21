@@ -62,3 +62,5 @@ export GPG_TTY=$(tty)
 
 # enable nodenv for shell
 eval "$(nodenv init -)"
+
+source /Users/brettski/.docker/init-zsh.sh || true # Added by Docker Desktop
