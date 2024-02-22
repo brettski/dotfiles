@@ -63,4 +63,7 @@ export GPG_TTY=$(tty)
 # enable nodenv for shell
 eval "$(nodenv init -)"
 
+# Homebrew settings
+HOMEBREW_NO_INSTALL_CLEANUP=1
+
 source /Users/brettski/.docker/init-zsh.sh || true # Added by Docker Desktop
