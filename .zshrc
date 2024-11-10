@@ -64,6 +64,7 @@ export GPG_TTY=$(tty)
 eval "$(nodenv init -)"
 
 # Homebrew settings
-HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_NO_INSTALL_CLEANUP=true
+export HOMEBREW_CLEANUP_MAX_AGE_DAYS=60
 
 source /Users/brettski/.docker/init-zsh.sh || true # Added by Docker Desktop
