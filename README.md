@@ -22,7 +22,7 @@ or https if not using ssh:
 
 ### Bootstrap The Dotfiles
 
-Run the shell script to setup the dotfiles goo. It will ask if you want to setup for zsh or bash. Linking files from `$HOME` folder will overwrite those files in your home folder. Ensure there are no configurations you wish to copy in to the dotfile folder versions of those files first.
+Run the shell script to setup the dotfiles goo. It will ask if you want to setup for zsh or bash. Linking files from `$HOME` folder will overwrite those files in your home folder. Ensure there are no configurations you wish to copy in to the dotfile folder versions of those files first. It's probably a good idea to same them somewhere first. 😉
 
 `% ./bootstrap.sh`
 
