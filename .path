@@ -5,6 +5,5 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # brew 'keg only' installs
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export PATH=/usr/local/opt/node@12/bin:$PATH
 
 export PATH="/usr/local/sbin:$PATH"
