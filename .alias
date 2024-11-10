@@ -16,3 +16,4 @@ alias nodever='nodenv version'
 
 # pico 8
 alias pico8='~/Downloads/pico-8/PICO-8.app/Contents/MacOS/pico8'
+alias picotron='~/Downloads/picotron/Picotron.app/Contents/MacOS/picotron'
