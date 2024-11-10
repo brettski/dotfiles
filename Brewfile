@@ -11,7 +11,7 @@ brew "telnet"
 brew "wget"
 brew "p7zip"
 #brew "openssl"
-brew "stripe/stripe-cli/stripe"
+#brew "stripe/stripe-cli/stripe"
 # Casks
 cask "brave-browser"
 cask "insomnia"
