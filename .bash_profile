@@ -1,4 +1,4 @@
-# big thatnks to https://github.com/mathiasbynens/dotfiles
+# big thanks to https://github.com/mathiasbynens/dotfiles
 
 
 if [[ -d "$HOME/.dotfiles" ]]; then
