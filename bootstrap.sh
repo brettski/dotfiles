@@ -27,6 +27,7 @@ function linkHome() {
     if [[ $SETSHELL -eq "zsh" ]]; then
         ln -sfv "$DOTFILES_DIR/.zshrc" ~
         ln -sfv "$DOTFILES_DIR/.zshenv" ~
+        ln -sfv "$DOTFILES_DIR/.zprofile" ~
     fi;
 
     ln -sfv "$DOTFILES_DIR/.gitconfig" ~
@@ -55,5 +56,5 @@ if [[ $SETSHELL = "bash" ]]; then
     source ~/.bash_profile;
 fi
 if [[ $SETSHELL = "zsh" ]]; then
-    source ~/.zshrc;
+    exec zsh
 fi
