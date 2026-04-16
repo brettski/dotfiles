@@ -1,12 +1,3 @@
-#export PATH="/usr/local/opt/node@10/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK (gcp installed or brew installed).
-if [ -f '/Users/brettski/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brettski/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud (gcp installed or brew installed).
-if [ -f '/Users/brettski/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brettski/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Brew zsh completions
 if type brew &>/dev/null; then
@@ -60,9 +51,3 @@ echo "done"
 # GPG setting for active shell
 export GPG_TTY=$(tty)
 
-# enable nodenv for shell
-eval "$(nodenv init -)"
-
-# Homebrew settings
-export HOMEBREW_NO_INSTALL_CLEANUP=true
-export HOMEBREW_CLEANUP_MAX_AGE_DAYS=60
