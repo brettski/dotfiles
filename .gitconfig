@@ -4,7 +4,7 @@
 	name = Brett Slaski
 	email = brettski@yahoo.com
 # mbw-key
-	signingkey = 42CBD0625C45C007
+	signingkey = 61C5B647033F6A7D
 [core]
 	excludesfile = ~/.gitignore
 [color]
@@ -12,7 +12,7 @@
 [credential]
 	helper = osxkeychain
 [commit]
-	gpgsign = false
+	gpgsign = true
 [pull]
 	rebase = false
 [init]

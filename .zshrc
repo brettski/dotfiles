@@ -51,3 +51,6 @@ echo "done"
 # GPG setting for active shell
 export GPG_TTY=$(tty)
 
+# fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
+

@@ -1,9 +1,4 @@
 # https://github.com/Homebrew/homebrew-bundle
-# reference taps
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/versions"
 # install packages
 brew "fnm"
 brew "go"
