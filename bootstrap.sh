@@ -21,10 +21,10 @@ function linkHome() {
         exit 1
     fi
 
-    if [[ $SETSHELL -eq "bash" ]]; then
+    if [[ $SETSHELL == "bash" ]]; then
         ln -sfv "$DOTFILES_DIR/.bash_profile" ~
     fi;
-    if [[ $SETSHELL -eq "zsh" ]]; then
+    if [[ $SETSHELL == "zsh" ]]; then
         ln -sfv "$DOTFILES_DIR/.zshrc" ~
         ln -sfv "$DOTFILES_DIR/.zshenv" ~
         ln -sfv "$DOTFILES_DIR/.zprofile" ~
@@ -40,21 +40,30 @@ function linkHome() {
     . $DOTFILES_DIR/.macos
 }
 
+function integrations() {
+    if [[ $SETSHELL == "zsh" ]]; then
+        curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
+    fi;
+}
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
     linkHome;
+    integrations;
 else
     echo "DOTFIRES_DIR: $DOTFILES_DIR"
     read -p "This will probably overwrite files in your home directory. Are you SURE you want to do this (y/n) : " -n 1;
     echo "";
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         linkHome;
+        integrations;
     fi
 fi;
-unset linkHome;
+unset -f linkHome;
+unset -f integrations;
 
-if [[ $SETSHELL = "bash" ]]; then
+if [[ $SETSHELL == "bash" ]]; then
     source ~/.bash_profile;
 fi
-if [[ $SETSHELL = "zsh" ]]; then
+if [[ $SETSHELL == "zsh" ]]; then
     exec zsh
 fi

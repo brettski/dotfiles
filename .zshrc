@@ -54,3 +54,6 @@ export GPG_TTY=$(tty)
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
 
+# iTerm2 shell integration
+source ~/.iterm2_shell_integration.zsh
+
