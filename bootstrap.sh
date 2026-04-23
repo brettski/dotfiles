@@ -37,7 +37,7 @@ function linkHome() {
     ln -sfv "$DOTFILES_DIR/.exports" ~
     ln -sfv "$DOTFILES_DIR/.path" ~
 
-    . $DOTFILES_DIR/.macos
+    . "$DOTFILES_DIR/.macos"
 }
 
 function integrations() {
@@ -46,11 +46,11 @@ function integrations() {
     fi;
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "$1" == "--force" || "$1" == "-f" ]; then
     linkHome;
     integrations;
 else
-    echo "DOTFIRES_DIR: $DOTFILES_DIR"
+    echo "DOTFILES_DIR: $DOTFILES_DIR"
     read -p "This will probably overwrite files in your home directory. Are you SURE you want to do this (y/n) : " -n 1;
     echo "";
     if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -58,6 +58,7 @@ else
         integrations;
     fi
 fi;
+
 unset -f linkHome;
 unset -f integrations;
 
