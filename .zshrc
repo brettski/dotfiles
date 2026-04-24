@@ -55,7 +55,6 @@ zstyle ':vcs_info:git' actionformats '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%
 #PROMPT='%(?.√.%F{red}?%?)%f %F{green}%~%f %# '
 #PROMPT='%F{green}%~%f ${vcs_info_msg_0_} ${CH10}%(?.%F{green}√.%F{red}?%?)%f  %# '
 PROMPT='${vcs_info_msg_0_} %(?.%F{green}√.%F{red}?%?)%f %F{green}%~%f %# '
-echo "done"
 
 # GPG setting for active shell
 export GPG_TTY=$(tty)
@@ -66,3 +65,8 @@ eval "$(nodenv init -)"
 # Homebrew settings
 export HOMEBREW_NO_INSTALL_CLEANUP=true
 export HOMEBREW_CLEANUP_MAX_AGE_DAYS=60
+
+# iTerm2 shell integration
+source ~/.iterm2_shell_integration.zsh
+
+echo "done"
