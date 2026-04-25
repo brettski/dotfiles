@@ -8,3 +8,6 @@ export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+# PostgreSQL tools (installed from brew)
+export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
