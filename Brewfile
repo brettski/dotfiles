@@ -6,6 +6,7 @@ brew "telnet"
 brew "wget"
 brew "p7zip"
 brew "gnupg"
+brew "libpq"
 # Casks
 cask "brave-browser"
 cask "yaak"
