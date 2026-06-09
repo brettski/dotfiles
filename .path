@@ -10,4 +10,4 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 # PostgreSQL tools (installed from brew)
-export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
+export PATH="$PATH:/opt/homebrew/opt/libpq/bin"export PATH="$HOME/.local/bin:$PATH"
