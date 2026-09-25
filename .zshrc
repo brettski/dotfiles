@@ -51,5 +51,5 @@ echo "done"
 FNM_PATH="/Users/brettski/Library/Application Support/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
-  eval "$(fnm env --shell zsh)"
+  eval "$(fnm env --shell zsh --use-on-cd)"
 fi
