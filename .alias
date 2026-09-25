@@ -11,9 +11,6 @@ alias path='echo -e ${PATH//:/\\n}'
 alias npmupdate='npm install -g npm'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
-# show nodenv version and location
-alias nodever='nodenv version'
-
 # pico 8
 alias pico8='~/Downloads/pico-8/PICO-8.app/Contents/MacOS/pico8'
 alias picotron='~/Downloads/picotron/Picotron.app/Contents/MacOS/picotron'

@@ -1,20 +1,3 @@
-#export PATH="/usr/local/opt/node@10/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK (gcp installed or brew installed).
-if [ -f '/Users/brettski/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/brettski/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud (gcp installed or brew installed).
-if [ -f '/Users/brettski/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/brettski/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Brew zsh completions
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
 
 if [[ -d "$HOME/.dotfiles" ]]; then
 	DOTFILES_DIR="$HOME/.dotfiles";
@@ -59,14 +42,14 @@ PROMPT='${vcs_info_msg_0_} %(?.%F{green}√.%F{red}?%?)%f %F{green}%~%f %# '
 # GPG setting for active shell
 export GPG_TTY=$(tty)
 
-# enable nodenv for shell
-eval "$(nodenv init -)"
-
-# Homebrew settings
-export HOMEBREW_NO_INSTALL_CLEANUP=true
-export HOMEBREW_CLEANUP_MAX_AGE_DAYS=60
-
 # iTerm2 shell integration
 source ~/.iterm2_shell_integration.zsh
 
 echo "done"
+
+# fnm
+FNM_PATH="/Users/brettski/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
+fi

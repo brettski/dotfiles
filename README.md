@@ -30,6 +30,8 @@ That should do it for setting up links to the dotfiles
 
 ## Install [Homebrew](https://brew.sh)
 
+**Note** Homebrew reduced support for Intel-based Macs in September 2026. It will be fully unsupported in September 2027.
+
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 ## Brew Bundle file
